@@ -2,7 +2,8 @@
 
 set -euo pipefail
 
-CONFIG_FILE="backups.ini"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+CONFIG_FILE="$SCRIPT_DIR/backups.ini"
 LOG_DIR="${HOME}/.backup_logs"
 TMP_DIR="/tmp/db_backups"
 DATE_TAG=$(date +%Y%m%d)
